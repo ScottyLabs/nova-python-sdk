@@ -1,6 +1,6 @@
-# Nova SDK
+# Nova Python SDK
 
-Nova SDK is a client library for interacting with the NOVA hackathon hosted by ScottyLabs. It allows users to create messages containing text, images, and audio and process them for various outputs like text, images, or audio.
+The Nova Python SDK is a Python client library for use in the NOVA hackathon hosted by ScottyLabs. It allows users to create messages containing text, images, and audio and process them for various generative models that support output modalities like text, images, or audio.
 
 ## Installation
 
