@@ -132,6 +132,7 @@ class TextToSpeech:
     TextToSpeech class provides text-to-speech functionality.
 
     Attributes:
+        nova_client (NovaClient): The NovaClient client to use for requests.
         provider (str): The provider to use ('cartesia', 'hume').
     """
 
