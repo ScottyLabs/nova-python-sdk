@@ -5,7 +5,7 @@ Nova SDK is a client library for interacting with the NOVA hackathon hosted by S
 ## Installation
 
 ```bash
-pip install nova_client_sdk
+pip install nova-client-sdk
 ```
 
 ## Basic Usage
