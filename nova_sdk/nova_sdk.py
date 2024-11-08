@@ -50,7 +50,7 @@ class NovaClient:
         else:
             raise Exception(f"Failed to load API keys: {response.status_code} {response.text}")
 
-    def process_message(self, message, output_modality):
+    def process_message(self, message, output_modality, stream = False, model = "gpt-4o"):
         """
         Process a message and get the response in the desired output modality.
 
@@ -64,7 +64,9 @@ class NovaClient:
         url = f'{self.server_url}/process_message'
         data = {
             'text': message.text,
-            'output_modality': output_modality
+            'output_modality': output_modality,
+            'stream': stream,
+            'model': model,
         }
         files = []
 
@@ -157,7 +159,7 @@ class TextToSpeech:
         Returns:
             The synthesized audio content.
         """
-        url = f'{self.nova_sdk.server_url}/text_to_speech'
+        url = f'{self.nova_client.server_url}/text_to_speech'
         data = {
             'text': text,
             'provider': self.provider
